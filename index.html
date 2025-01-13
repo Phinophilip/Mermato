@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Cart Page</title>
+  </head>
+  <header class="header">
+    <div class="cart-page">
+      <div class="logo-container">
+        <img
+          class="logo"
+          rel="icon"
+          src="Images/a74736d502746301ed573ed8940fc322 (2).png"
+          alt="Logo"
+        />
+        <span class="brand-name">MERMATO</span>
+      </div>
+      <nav class="nav-links">
+        <span class="nav-link">Home</span>
+        <span class="nav-link">Shop</span>
+        <span class="nav-link">About</span>
+        <span class="nav-link">Contact</span>
+      </nav>
+      <div class="icon-container">
+        <img src="Images/Vector (4).svg" alt="Icon 1" />
+        <img src="Images/Vector (5).svg" alt="Icon 2" />
+        <img src="Images/Vector (6).svg" alt="Icon 3" />
+      </div>
+    </div>
+  </header>
+
+  <body>
+    <section class="banner">
+      <div class="banner-content">
+        <img src="Images/Rectangle 1.png" alt="blur" class="blur-image" />
+        <div class="overlay-content">
+          <div class="icon-wrapper">
+            <img
+              src="Images/a74736d502746301ed573ed8940fc322 (2).png"
+              alt="Icon"
+              class="banner-icon"
+            />
+          </div>
+          <h1 class="banner-title">Cart</h1>
+          <div class="breadcrumb">
+            <span class="breadcrumb-link">Home</span>
+            <span class="breadcrumb-separator">/</span>
+            <span class="breadcrumb-link">Cart</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="cart-container">
+      <section class="cart-items">
+        <table class="cart-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Subtotal</th>
+            </tr>
+          </thead>
+          <tbody id="cart-items-body"></tbody>
+        </table>
+      </section>
+
+      <aside class="cart-totals">
+        <h2 class="totals-title">Cart Totals</h2>
+        <div class="totals">
+          <div class="totals-row">
+            <span>Subtotal</span>
+            <span class="total-amount subtotal">₹0.00</span>
+          </div>
+          <div class="totals-row">
+            <span>Total</span>
+            <span class="total-amount total">₹0.00</span>
+          </div>
+        </div>
+        <button class="checkout-button">Check Out</button>
+      </aside>
+    </div>
+    <script src="script.js"></script>
+  </body>
+  <footer class="footer">
+    <section class="features">
+      <div class="feature-item">
+        <img
+          src="Images/Vector.svg"
+          alt="High Quality Icon"
+          class="feature-icon"
+        />
+        <div class="feature-text">
+          <h3 class="feature-title">High Quality</h3>
+          <p class="feature-description">Crafted from top materials</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <img
+          src="Images/Vector (1).svg"
+          alt="Warranty Protection Icon"
+          class="feature-icon"
+        />
+        <div class="feature-text">
+          <h3 class="feature-title">Warranty Protection</h3>
+          <p class="feature-description">Over 2 years</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <img
+          src="Images/Vector (2).svg"
+          alt="Free Shipping Icon"
+          class="feature-icon"
+        />
+        <div class="feature-text">
+          <h3 class="feature-title">Free Shipping</h3>
+          <p class="feature-description">Order over $150</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <img
+          src="Images/Vector (3).svg"
+          alt="Support Icon"
+          class="feature-icon"
+        />
+        <div class="feature-text">
+          <h3 class="feature-title">24/7 Support</h3>
+          <p class="feature-description">Dedicated support</p>
+        </div>
+      </div>
+    </section>
+  </footer>
+</html>
