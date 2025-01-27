@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const cartItemsBody = document.getElementById("cart-items-body");
   const subtotalElement = document.querySelector(".subtotal");
   const totalElement = document.querySelector(".total");
+  const noItemsMessage = document.getElementById("no-items-message");
 
   const formatPrice = (price) => `₹${(price / 100).toFixed(2)}`;
 
@@ -37,9 +38,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const renderCart = () => {
     const items = cartData.items;
 
+    // Clear the cart table before rendering
+    cartItemsBody.innerHTML = "";
+
     if (items.length === 0) {
-      console.log("No items to display.");
+      // Show the no-items message and hide the table
+      noItemsMessage.style.display = "block";
+      subtotalElement.textContent = formatPrice(0);
+      totalElement.textContent = formatPrice(0);
       return;
+    } else {
+      // Hide the no-items message if items exist
+      noItemsMessage.style.display = "none";
     }
 
     items.forEach((item) => {
@@ -87,8 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const index = items.findIndex((i) => i.id === item.id);
         if (index !== -1) {
           items.splice(index, 1);
-          row.remove();
-          calculateTotals(items);
+          renderCart(); // Re-render the cart to reflect the changes
         }
       });
 
